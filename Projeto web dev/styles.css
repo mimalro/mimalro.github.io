@@ -46,6 +46,18 @@
   display: block;
 }
 
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Quando o elemento estiver visível, ele terá opacity 1 e será posicionado corretamente */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 body {
     font-family: Arial, sans-serif;

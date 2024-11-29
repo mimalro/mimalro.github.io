@@ -1,10 +1,59 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+:root{
+    --base-color: white;
+    --base-variant: #e8e9ed;
+    --text-color: #111528;
+    --secondary-text: #232738;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+
+}
+.darkmode{
+    --base-color: #070b1d;
+    --base-variant: #101425;
+    --text-color: #ffffff;
+    --secondary-text: #a4a5b8;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
 }
 
+#tema{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 90%;
+  cursor: pointer;
+}
+
+#tema svg{
+  fill: var(--text-color);
+}
+#tema svg:last-child{
+  display: none;
+}
+
+.darkmode #tema svg:first-child{
+  display: none;
+}
+.darkmode #tema svg:last-child{
+  display: block;
+}
+
+body {
+    font-family: Arial, sans-serif, var(--base-color);
+    margin: 0;
+    padding: 0;
+    background-color: var(--base-color);
+}
+
+
 .bodyCima{
+        font-family: Arial, Helvetica, sans-serif;
         background-color: #4CAF50;
         color: white;
         padding: 10px 0;
@@ -15,6 +64,7 @@ body {
 .nav{
     background-color: #333;
     overflow: hidden;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 nav a {
@@ -24,6 +74,7 @@ nav a {
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
+    font-family:Georgia, 'Times New Roman', Times, serif
 }
 nav a:hover {
     background-color: #ddd;
@@ -33,7 +84,9 @@ nav a:hover {
 .mainContent{
     padding: 20px;
     margin: 15px;
-    background-color: #f4f4f4;
+    background-color: var(--base-variant);
+    color: var(--text-color);
+    font-family:Georgia, 'Times New Roman', Times, serif
 }
 
 .footer{
@@ -111,9 +164,7 @@ nav a:hover {
     text-align: left;
     display: flex;
     justify-content: space-between;
+    max-width: 380px;
 
 
-}
-
-#inputEmail{
 }
