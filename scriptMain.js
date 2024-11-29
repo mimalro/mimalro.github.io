@@ -38,7 +38,7 @@ window.addEventListener('scroll', function() {
 
     elements.forEach(function(element){
         const rect = element.getBoundingClientRect();
-        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight * 1.5) {
             element.classList.add('visible');
         } else {
             element.classList.remove('visible');
